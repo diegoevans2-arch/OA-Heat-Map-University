@@ -213,8 +213,8 @@ One-click automated PDF generation containing:
 │  PROG_DETALLADA  │     │  PLANTA_FISICA    │     │  BLOQUES_STD    │
 │                  │     │                   │     │                 │
 └────────┬─────────┘     └────────┬──────────┘     └────────┬────────┘
-         │                        │                          │
-         └────────────────┬───────┘──────────────────────────┘
+         │                        │                         │
+         └────────────────┬───────┘─────────────────────────┘
                           │
                    ┌──────▼──────┐
                    │   FILTERS   │
@@ -306,12 +306,6 @@ dash_app/
 | **Data Processing** | Pandas, NumPy |
 | **Styling** | Custom CSS (Marble Minimal aesthetic) |
 | **Typography** | Playfair Display + DM Sans (Google Fonts) |
-
----
-
-Open **http://localhost:8050** in your browser.
-
-> 💡 The app listens on `0.0.0.0:8050`, so any device on your local network can access it via your machine's IP address.
 
 ---
 
