@@ -205,13 +205,13 @@ One-click automated PDF generation containing:
 ### Data Pipeline
 
 ```
-┌─────────────────┐     ┌──────────────────┐     ┌─────────────────┐
+┌─────────────────┐      ┌───────────────────┐     ┌─────────────────┐
 │  SCHEDULING DB   │     │  PHYSICAL PLANT   │     │  STANDARD TIME  │
 │  (Enrollments,   │     │  (Room capacity,  │     │  BLOCKS         │
 │   Room assign.)  │     │   Classifications)│     │  (19 blocks)    │
 │                  │     │                   │     │                 │
 │  PROG_DETALLADA  │     │  PLANTA_FISICA    │     │  BLOQUES_STD    │
-│  _PARA_HEATMAP   │     │  _PREPROCESADA    │     │  _01122025      │
+│                  │     │                   │     │                 │
 └────────┬─────────┘     └────────┬──────────┘     └────────┬────────┘
          │                        │                          │
          └────────────────┬───────┘──────────────────────────┘
@@ -250,7 +250,7 @@ Student Flow = sum(Enrolled Mon-Fri) / Total Capacity
 
 ### Filtering Logic
 
-- Only records with `REG_UNICO_LLAV2 = 1` (unique scheduling records)
+- Only records with `REG_UNICO = 1` (unique scheduling records)
 - Only records with valid `DIA_SESION` (non-null, non-empty)
 - Only records with valid `SALA` (non-null, non-empty, non-NaN)
 - Date overlap logic: `record_start ≤ filter_end AND record_end ≥ filter_start`
@@ -309,37 +309,6 @@ dash_app/
 
 ---
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-```bash
-pip install dash dash-bootstrap-components plotly pandas numpy reportlab kaleido
-```
-
-### Installation
-
-```bash
-git clone https://github.com/your-username/Heat-map-University.git
-cd Heat-map-University/dash_app
-```
-
-### Data Setup
-
-Place your 3 CSV files in the `BBDD/` directory:
-
-| File | Description | Encoding |
-|------|-------------|----------|
-| `PROG_DETALLADA_PARA_HEATMAP.csv` | Scheduling records with enrollments | latin-1, separator `;` |
-| `PLANTA_FISICA_PREPROCESADA.csv` | Room capacities and classifications | utf-8, separator `;` |
-| `BLOQUES_ESTANDAR_01122025.csv` | Standard time blocks definition | latin-1, separator `;` |
-
-### Run
-
-```bash
-python app.py
-```
-
 Open **http://localhost:8050** in your browser.
 
 > 💡 The app listens on `0.0.0.0:8050`, so any device on your local network can access it via your machine's IP address.
@@ -376,7 +345,7 @@ Heat-map-University/
 │   └── BBDD/                       # Data (not published)
 │
 └── notebooks/
-    └── INTERFAZ_HEATMAP.ipynb      # Original Jupyter analysis
+    └──                             # Original Jupyter analysis
 ```
 
 ---
@@ -431,13 +400,6 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 5. Open a Pull Request
 
 ---
-
-## 📄 License
-
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
-
----
-
 <div align="center">
 
 **Built with ❤️ for better university space management**
