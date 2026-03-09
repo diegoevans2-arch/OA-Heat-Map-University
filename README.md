@@ -8,7 +8,6 @@
 [![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Charts-3F4F75?style=flat-square&logo=plotly&logoColor=white)](https://plotly.com)
 [![Dash](https://img.shields.io/badge/Dash-Web%20Framework-00ADD8?style=flat-square&logo=plotly&logoColor=white)](https://dash.plotly.com)
 [![ReportLab](https://img.shields.io/badge/ReportLab-PDF%20Generation-CC0000?style=flat-square)](https://www.reportlab.com)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
 <br>
 
