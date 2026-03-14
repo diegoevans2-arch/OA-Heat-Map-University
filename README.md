@@ -357,7 +357,7 @@ Heat-map-University/
 <img src="docs/images/customization_panel.png" alt="Customization" width="40%">
 
 ### Executive PDF Report
-<img src="docs/images/pdf_report_pages.png" alt="PDF Report" width="85%">
+<a href="docs/reports/sample_executive_report.pdf">📄 Ver reporte de ejemplo (PDF)</a>
 
 </div>
 
